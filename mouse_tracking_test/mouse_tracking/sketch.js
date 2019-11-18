@@ -15,6 +15,8 @@ function mouseClicked() {
   })
   const clickData = JSON.stringify(clickPos)
   console.log('click: ' + clickData)
+  const click = window.localStorage
+  click.setItem('clickData', clickData)
 }
 
 const movePos = []
@@ -25,6 +27,8 @@ function mouseMoved() {
   })
   const moveData = JSON.stringify(movePos)
   console.log('move: ' + moveData)
+  const move = window.localStorage
+  move.setItem('moveData', moveData)
 }
 
 const wheelPos = []
@@ -35,4 +39,6 @@ function mouseWheel () {
   })
   const wheelData = JSON.stringify(wheelPos)
   console.log('wheel: ' + wheelData)
+  const wheel = window.localStorage
+  wheel.setItem('wheelData', wheelData)
 }
